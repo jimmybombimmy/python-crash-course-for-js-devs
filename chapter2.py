@@ -74,7 +74,7 @@ print("\n\nNUMBERS:\n")
 print(f"\n2 ** 3 = {2 ** 3}")
 
 print("\nFloats are used in any calc that uses them by default")
-print(f"Division automatically uses them: 4 / 2 = {4 / 2}")
+print(f"Division automatically uses them, regardless of whether a decimal is required: 4 / 2 = {4 / 2}")
 
 big_num = 14_000_000
 print("\nbig numbers can have underscores in space of commas when creating a variable")

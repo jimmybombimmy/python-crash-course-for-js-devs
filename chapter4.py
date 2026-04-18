@@ -62,7 +62,7 @@ print("You can also loop through slices")
 for person in people[:2]:
   print(person)
 
-print("slicing can be used to make a copy: `people_copy = people[:]`")
+print("slicing can be used to make a true copy: `people_copy = people[:]`")
 people_copy = people[:]
 
 print()
@@ -78,5 +78,5 @@ tuple_one_example = ("newval",)
 print()
 print("Python styling rules (as per Python Enhancement Proposal):")
 print("- 4 space indents are preferred")  
-print("- make sure that your IDE processes the tab button as four separate spaces and not an actual tab") 
-print("- Line length should be no longer than 80 chars (with comments maxxing at 72 chars)")
+print("- Make sure that your IDE processes the tab button as four separate spaces and not an actual tab") 
+print("- Line length should be no longer than 80 chars (with comments maxing at 72 chars)")

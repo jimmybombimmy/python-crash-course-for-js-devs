@@ -23,7 +23,7 @@ pizza_toppings = ["mushrooms", "pepperoni", "olives"]
 print("mushrooms" in pizza_toppings)
 print("pineapples" not in pizza_toppings)
 
-print("\nNotice that 'True' or 'False' has a starting capital letter:")
+print("\nBe aware that 'True' or 'False' has a starting capital letter:")
 t = True
 f = False
 print(f"{t},{f}")

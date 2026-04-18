@@ -1,6 +1,6 @@
 # Dictionaries
 
-print("Basically objects")
+print("Dictionaties are basically objects")
 print("But without dot notation & keys have to be quoted")
 alien = {'colour': "blue", 'points': 5}
 
@@ -16,7 +16,7 @@ point_value_one_arg = alien.get('points')
 print(point_value)
 print(point_value_one_arg)
 
-print("\nfor in loops exist in Python - as long as you go through the `items()` (keys):")
+print("\nfor in loops exist in Python - You can go through the keys and values with `items()`:")
 for k, v in alien.items():
   print(f"key: {k}, value: {v}")
 
@@ -42,14 +42,16 @@ for alien_number in range(30):
   aliens.append(new_alien)
 for alien in aliens[:5]:
   print(alien) # notice how this overwrites the old alien
+# This only changes the last value, which is a ref to the 5th val. 
+# The way I made this above creates a separate alien each time so this must be have its own reference in memory here.
 
-print(alien) # For some reason, this only changes the last value, which is a ref to the 5th val
+print(alien) 
 alien['colour'] = 'red'
 for alien in aliens[:10]:
   print(alien) 
 
 print(f"total number of aliens: {len(aliens)}")
 
-print("\nBtw, you can store List or Dictionaries and nest them as values")
-print("You should be able to figure out how to do this")
+print("\nBtw, you can store List or Dictionaries and nest them as values.")
+print("You should be able to figure out how to do this.")
 
