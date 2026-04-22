@@ -1,3 +1,5 @@
+# Chapter 1 - Getting Started
+
 # This is just about installing VS Code and stuff
 
 # You can run a file by running python3 file.py

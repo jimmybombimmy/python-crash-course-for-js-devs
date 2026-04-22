@@ -1,4 +1,4 @@
-# - Working With Lists
+# Chapter 4 - Working With Lists
 
 people = ["Jim", "Abs", "Forloopia"]
 for person in people:

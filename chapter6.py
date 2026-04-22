@@ -1,4 +1,4 @@
-# Dictionaries
+# Chapter 6 - Dictionaries
 
 print("Dictionaties are basically objects")
 print("But without dot notation & keys have to be quoted")

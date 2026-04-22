@@ -1,3 +1,5 @@
+# Chapter 2 - Variables and simple data types
+
 print("Hello Python World")
 
 message = "message: Why do python variables not have const or let?"
@@ -84,5 +86,5 @@ a, b, c = 1, 2, 3
 print(f"\nYou can set many variables in one line like 'a, b, c = 1, 2, 3': {a, b, c}")
 
 DONT_CHANGE_THIS_NUM = 5000
-print("\nPython doesn't have constants, but you can show you think something should be unchanging by putting it in all caps")
+print("\nPython doesn't have constants, but you can show that you think something should be unchanging by putting it in all caps")
 print(f"DONT_CHANGE_THIS_NUM = {DONT_CHANGE_THIS_NUM} ")
