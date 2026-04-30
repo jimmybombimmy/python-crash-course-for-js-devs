@@ -12,14 +12,14 @@ Ensure you are in the chapter11 folder when running commands below
 First create a virtual environment and enter it
 
 ```bash
-p -m venv .venv
+python -m venv .venv
 source .venv/bin/activate
 ```
 
 Then installed pytest (this was being shit so just use venv's below)
 
 ```bash
-python3 -m pip install pytest
+python -m pip install pytest
 ```
 
 - there is the option to `install --user` which says its just for this user only
@@ -64,10 +64,10 @@ python3 -m pip install pytest
 See that there is a [./tests/test_name_function.py](./tests/test_name_function.py) and a [./src/name_function.py](./src/name_function.py)
 
 Common testing convention in python is that a test is written as such:
-`test_<name-of-function-tested>.py`
-easy
+`test_<name-of-function-tested>.py`.
+Easy!
 
-Now see that the testing function `assert`'s the value expected back. This is how the most basic test in Python is formed. Much shorter than JS's `expect(x)toBe(y)` however, Pytest can get more complicated than we're stating here
+Now see that the testing function `assert`'s the value expected back. This is how the most basic test in Python is formed. Much shorter than JS's `expect(x)toBe(y)`, however, Pytest can get more complicated than what will be given on this page.
 
 ### Running The test files - Caveats to current setup
 
@@ -83,24 +83,23 @@ But it's not that easy here...
 
 In Python you sometimes need to run your files or dependencies as modules.
 
-This means running a test with the testable function in a different folder is not just as simple as running `pytest` alone
+This means running a test with the testable function in a different folder is not just as simple as running `pytest` alone.
 
-In our case to run a specific test file, you need to run with a `-m` flag
-Now Python treats `tests/<files>` like a package and includes the root in `sys.path`.
+To have a folder useable as a module, you may need to create an empty `__init__.py` to register that files in this folder can be called as a module (more on this below).
 
-To run the tests in one of our specific files, now (from the chapter11 folder) we run the following:
+To run the tests in one of our specific files, now (from this chapter11 folder) we run the following:
 
 ```bash
-python -m pytest tests/test_name.py
+python -m pytest tests/test_name_function.py
 ```
 
 This runs `pytest` as a module (`-m`) and then `tests/test_name.py` is an argument passed to it.
 
 Python now can also run regular files as if they're modules.
 
-However, this is a bit different as the file becomes a module itself and is called differently
+However, this is a bit different as the file becomes a module itself and is called differently.
 
-Try running the following
+Try running the following:
 
 ```bash
 python -m tests.test_survey
@@ -108,14 +107,14 @@ python -m tests.test_survey
 
 Here we have a **module path**, which follows similar rules that have been seen for imports in previous chapters.
 
-Know that there's a distinction between a module path and a file path
+Know that there's a distinction between a module path and a file path (dots vs slashes)
 
 ### Why can't I just run `pytest` again?
 
 When you run a file like this:
 
 ```bash
-python tests/test_survey.py
+pytest tests/test_survey.py
 ```
 
 Python sets:
@@ -126,7 +125,7 @@ sys.path[0] = "tests/"
 
 Not your project root.
 
-So Python will look for `survey.py` inside tests/, not alongside it.
+So Python will look for `survey.py` inside tests/, not alongside it. In our project, `survey.py` is in `/src`.
 
 ## Using Fixtures
 
@@ -134,7 +133,7 @@ Fixtures can be used to help set up test environments. The example in [./tests/t
 
 These are made with a `@pytest.fixture` decorator and applied as through the first argument of your test function.
 
-A **decorator** is a directive placed just before a function definition - This alters how the code behaves depending on the decorator
+A **decorator** is a directive placed just before a function definition - This alters how the code behaves depending on the decorator.
 
 Unlike with tests ran so far, you need to `import pytest` so that the decorator required for the fixture is added.
 
@@ -148,7 +147,7 @@ These can be used to group Python functions together. For example, all unit test
 `python -m pytest -m unit`
 ```
 
-**Remember:** the first `-m` is an argument for `python` that is for modules. The second `-m` is an argument for `pytest` that runs all functions with the unit test marker.
+**Remember:** the first `-m` is an argument for `python` that is for modules. The second `-m` is an argument for `pytest` that runs all functions with the specified test marker.
 
 Notice how in [./tests/test_survey.py](./tests/test_survey.py), there are markers for `classes`. This code can actually be run.
 
