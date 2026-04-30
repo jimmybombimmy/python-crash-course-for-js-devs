@@ -14,8 +14,11 @@ Hope this helps! 😊
 
 ## Reading through chapter notes
 
-When reading any notes, you can run `python chapter[X].py` to see the functionality.
+When reading any notes, you can run `python chapter[X].chapter[X]` to see the functionality.
 
 I would recommend doing this and reading along with what is ouput to the terminal.
 
-From `chapter7.py`, you will be asked to input some values, also.
+### Exceptions
+
+- From `chapter7/chapter7.py`, you may be asked to input some values into the terminal, also. This is where the `input()` function comes into play
+- In `chapter11` we start working with PIP - as a result, I'd recommend `cd`ing into `/chapter11` and reading `chapter11.md` to look at how to run the modules/tests
